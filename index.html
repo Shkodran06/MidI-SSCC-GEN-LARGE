@@ -227,7 +227,7 @@ function generateQR(v){
 /* ===== HISTORY ===== */
 function renderHistory(){
   historyBox.innerHTML='';
-  Object.keys(memory).slice(-6).reverse().forEach(k=>{
+  Object.keys(memory).slice(-6).forEach(k=>{
     const d=document.createElement('div');
     d.textContent=`${k} (${memory[k].count}) - ${memory[k].lastPrinted}`;
     d.onclick=()=>{
@@ -331,5 +331,6 @@ document.getElementById('clear').onclick=()=>{
 
 </body>
 </html>
+
 
 
